@@ -1,5 +1,5 @@
 //
-//  HW2ViewController.h
+//  PostDetailViewController.h
 //  Homework2
 //
 //  Created by Frazier Moore on 2/13/14.
@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Post.h"
+@interface PostDetailViewController : UIViewController
 
-@interface HW2ViewController : UIViewController
+@property (nonatomic, weak) Post *post;
 
 @end

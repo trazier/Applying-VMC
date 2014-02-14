@@ -11,6 +11,6 @@
 
 @interface PostTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) Post *postItem;
+@property (nonatomic, weak) Post *postItem;
 
 @end

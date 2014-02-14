@@ -12,7 +12,6 @@
 		235EC89118AD8F69005AD06F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235EC89018AD8F69005AD06F /* UIKit.framework */; };
 		235EC89D18AD8F69005AD06F /* HW2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 235EC89C18AD8F69005AD06F /* HW2AppDelegate.m */; };
 		235EC8A018AD8F69005AD06F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235EC89E18AD8F69005AD06F /* Main.storyboard */; };
-		235EC8A318AD8F69005AD06F /* HW2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235EC8A218AD8F69005AD06F /* HW2ViewController.m */; };
 		235EC8A518AD8F69005AD06F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235EC8A418AD8F69005AD06F /* Images.xcassets */; };
 		235EC8AC18AD8F6A005AD06F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235EC8AB18AD8F6A005AD06F /* XCTest.framework */; };
 		235EC8AD18AD8F6A005AD06F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235EC88C18AD8F69005AD06F /* Foundation.framework */; };
@@ -24,6 +23,7 @@
 		235EC8D218AD9EFD005AD06F /* PostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 235EC8D118AD9EFD005AD06F /* PostTableViewCell.m */; };
 		235EC91B18ADB626005AD06F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 235EC91718ADB626005AD06F /* InfoPlist.strings */; };
 		235EC91C18ADB626005AD06F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 235EC91818ADB626005AD06F /* main.m */; };
+		235EC92018ADCD9B005AD06F /* PostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235EC91F18ADCD9B005AD06F /* PostDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +44,6 @@
 		235EC89B18AD8F69005AD06F /* HW2AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HW2AppDelegate.h; sourceTree = "<group>"; };
 		235EC89C18AD8F69005AD06F /* HW2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HW2AppDelegate.m; sourceTree = "<group>"; };
 		235EC89F18AD8F69005AD06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		235EC8A118AD8F69005AD06F /* HW2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HW2ViewController.h; sourceTree = "<group>"; };
-		235EC8A218AD8F69005AD06F /* HW2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HW2ViewController.m; sourceTree = "<group>"; };
 		235EC8A418AD8F69005AD06F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		235EC8AA18AD8F6A005AD06F /* Homework2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Homework2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		235EC8AB18AD8F6A005AD06F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -62,6 +60,8 @@
 		235EC91718ADB626005AD06F /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		235EC91818ADB626005AD06F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		235EC91918ADB626005AD06F /* Homework2-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Homework2-Prefix.pch"; sourceTree = "<group>"; };
+		235EC91E18ADCD9B005AD06F /* PostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailViewController.h; sourceTree = "<group>"; };
+		235EC91F18ADCD9B005AD06F /* PostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,12 +153,10 @@
 		235EC8C118AD8F8A005AD06F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				235EC8A118AD8F69005AD06F /* HW2ViewController.h */,
-				235EC8A218AD8F69005AD06F /* HW2ViewController.m */,
 				235EC8CA18AD92B6005AD06F /* PostTableViewController.h */,
 				235EC8CB18AD92B6005AD06F /* PostTableViewController.m */,
-				235EC8D018AD9EFD005AD06F /* PostTableViewCell.h */,
-				235EC8D118AD9EFD005AD06F /* PostTableViewCell.m */,
+				235EC91E18ADCD9B005AD06F /* PostDetailViewController.h */,
+				235EC91F18ADCD9B005AD06F /* PostDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -166,6 +164,8 @@
 		235EC8C218AD8F91005AD06F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				235EC8D018AD9EFD005AD06F /* PostTableViewCell.h */,
+				235EC8D118AD9EFD005AD06F /* PostTableViewCell.m */,
 				235EC89E18AD8F69005AD06F /* Main.storyboard */,
 			);
 			name = Views;
@@ -289,10 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				235EC8A318AD8F69005AD06F /* HW2ViewController.m in Sources */,
 				235EC8CC18AD92B6005AD06F /* PostTableViewController.m in Sources */,
 				235EC8C918AD9087005AD06F /* Post.m in Sources */,
 				235EC89D18AD8F69005AD06F /* HW2AppDelegate.m in Sources */,
+				235EC92018ADCD9B005AD06F /* PostDetailViewController.m in Sources */,
 				235EC91C18ADB626005AD06F /* main.m in Sources */,
 				235EC8D218AD9EFD005AD06F /* PostTableViewCell.m in Sources */,
 			);

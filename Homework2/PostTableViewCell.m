@@ -31,6 +31,7 @@
 {
     _postItem = postItem;
     self.textLabel.text = postItem.title;
+    self.detailTextLabel.text = postItem.userName;
 }
 
 @end

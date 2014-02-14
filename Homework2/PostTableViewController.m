@@ -9,9 +9,12 @@
 #import "PostTableViewController.h"
 #import "Post.h"
 #import "PostTableViewCell.h"
+#import "PostDetailViewController.h"
+
 
 @interface PostTableViewController ()
 
+@property (nonatomic, strong) NSMutableArray *posts;
 
 @end
 
@@ -36,7 +39,7 @@
         post.userName = [NSString stringWithFormat:@"Name %d", i];
         post.title = [NSString stringWithFormat:@"Title %d", i];
         post.content = [NSString stringWithFormat:@"Content %d", i];
-//        post.timeStamp = [NSString stringWithFormat:@"Timestamp %d", i];
+        post.timeStamp = [NSDate date];
         [self.posts addObject:post];
     }
 }
@@ -66,6 +69,22 @@
     return cell;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
+        PostDetailViewController *detail = segue.destinationViewController;
+        NSInteger selectedRow = [self.tableView indexPathForSelectedRow].row;
+        Post *post = [self.posts objectAtIndex:selectedRow];
+        detail.post = post;
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self.tableView reloadData];
+}
 
 
 /*
@@ -107,16 +126,6 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end
